@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jose Lorenzo — Data Analyst Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-color: #111;
+      --text-color: #eee;
+      --accent-color: #00ffff;
+      --section-padding: 80px 20px;
+    }
+    * { margin:0; padding:0; box-sizing:border-box; font-family:'Poppins', sans-serif; }
+    body { background: var(--bg-color); color: var(--text-color); scroll-behavior: smooth; }
+    nav { position: fixed; top:0; width:100%; padding:20px; display:flex; justify-content:flex-end; backdrop-filter: blur(10px); z-index:100; }
+    nav a { color: var(--text-color); margin:0 15px; text-decoration:none; font-weight:600; transition: color .3s; }
+    nav a:hover { color: var(--accent-color); }
+    .hero { height:100vh; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; background:linear-gradient(135deg, #001f3f, #004466); }
+    .hero h1 { font-size:4rem; margin-bottom:10px; }
+    .hero p { font-size:1.5rem; margin-bottom:20px; max-width:600px; }
+    .btn { padding:15px 30px; border:2px solid var(--accent-color); color:var(--accent-color); text-decoration:none; font-weight:600; border-radius:30px; transition: background .3s, color .3s; }
+    .btn:hover { background: var(--accent-color); color: var(--bg-color); }
+    section { padding: var(--section-padding); position:relative; }
+    section:nth-child(even) { background:#222; }
+    h2 { font-size:2.5rem; margin-bottom:20px; position:relative; display:inline-block; }
+    h2::after { content:''; width:50%; height:4px; background:var(--accent-color); position:absolute; bottom:-10px; left:0; }
+    .section-symbol { font-size:4rem; text-align:center; margin:20px auto; color:var(--accent-color); }
+    .card-container { display:grid; grid-template-columns: repeat(auto-fit,minmax(300px,1fr)); gap:20px; margin-top:40px; }
+    .card { background:#1a1a1a; border-radius:10px; padding:20px; transition: transform .3s; }
+    .card:hover { transform: translateY(-10px); }
+    .card h3 { margin-bottom:10px; }
+    .card ul { list-style: inside disc; margin-left:10px; }
+    .viz-placeholder { width:100%; height:150px; margin-bottom:15px; }
+    #contact p, #contact a { color: #fff; }
+    footer { text-align:center; padding:20px; font-size:0.9rem; }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#experience">Experience</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <div class="hero">
+    <h1>Jose Lorenzo</h1>
+    <p>Data Analyst passionate about turning raw data into actionable insights. Completed Google Data Analytics Certificate in November 2024 and on an ongoing journey to master data-driven decision-making.</p>
+    <a href="#projects" class="btn">Explore My Work</a>
+  </div>
+  <section id="about">
+    <h2>About Me</h2>
+    <div class="section-symbol">📊</div>
+    <p>I began my professional career in operations, where I honed my analytical and problem-solving skills by optimizing logistics workflows and verifying large-scale data for top CPA firms. In late 2024, I solidified my commitment to data analytics by earning the <strong>Google Data Analytics Certificate</strong>. Since then, I've tackled real-world datasets to uncover trends, support strategic decisions, and visualize insights that drive performance.</p>
+    <p>Outside of dashboards and SQL queries, I enjoy experimenting with new data tools, sharing findings in blog posts, and mentoring peers who are starting their own data journeys.</p>
+  </section>
+  <section id="skills">
+    <h2>🧰 Skills</h2>
+    <ul>
+      <li>SQL (BigQuery, JOINs, Window Functions)</li>
+      <li>Data Cleaning & ETL (Excel, Python/pandas)</li>
+      <li>Visualization (Tableau, Looker, Excel PivotTables)</li>
+      <li>Reporting Automation (VBA Macros, Scripts)</li>
+      <li>Statistical Analysis & A/B Testing</li>
+      <li>Communication & Stakeholder Collaboration</li>
+    </ul>
+  </section>
+  <section id="projects">
+    <h2>🚀 Projects</h2>
+    <div class="section-symbol">📈</div>
+    <div class="card-container">
+      <div class="card">
+        <div class="viz-placeholder">
+          <svg width="100%" height="100%" viewBox="0 0 100 50" preserveAspectRatio="none">
+            <rect x="10" y="20" width="15" height="30" fill="var(--accent-color)" />
+            <rect x="35" y="10" width="15" height="40" fill="var(--accent-color)" />
+            <rect x="60" y="30" width="15" height="20" fill="var(--accent-color)" />
+          </svg>
+        </div>
+        <h3>Accenture — Navigating Numbers • Forage Project (11/2024)</h3>
+        <ul>
+          <li>Analyzed project brief to extract client needs, requirements, and analytics deliverables.</li>
+          <li>Cleaned and merged datasets in Excel to prepare for analysis answering the business question.</li>
+          <li>Designed and produced visualizations, then recorded and presented findings to stakeholders.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="viz-placeholder">
+          <svg width="100%" height="100%" viewBox="0 0 100 50" preserveAspectRatio="none">
+            <polyline points="0,45 20,30 40,25 60,15 80,20 100,10" fill="none" stroke="var(--accent-color)" stroke-width="2"/>
+          </svg>
+        </div>
+        <h3>BigQuery Data Exploration Project • Public Datasets (11/2024)</h3>
+        <ul>
+          <li>Explored a homelessness dataset (2010–2018) to identify trends and challenges.</li>
+          <li>Optimized schema by removing unnecessary columns and creating new calculated fields.</li>
+          <li>Executed SQL queries to pinpoint locations needing support for youth and veteran populations.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <section id="experience">
+    <h2>Experience</h2>
+    <div class="section-symbol">💼</div>
+    <div class="card-container">
+      <div class="card">
+        <h3>Amazon — Operations Coordinator III (2021–Present)</h3>
+        <ul>
+          <li>Improved on-time delivery by 30% through process redesign and performance tracking.</li>
+          <li>Developed reporting tools in Excel to monitor key metrics, reducing manual errors by 40%.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>SurePrep LLC — Tax Data Verification Coordinator (2021)</h3>
+        <ul>
+          <li>Verified and standardized tax data for Big 4 CPA firms with 99.8% accuracy.</li>
+          <li>Streamlined a paperless workflow, cutting data processing time by 20%.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <p>Interested in collaborating on a data project or just want to chat analytics? Reach out!</p>
+    <p><strong>Email:</strong> <a href="mailto:lorenzojose326@gmail.com">lorenzojose326@gmail.com</a></p>
+    <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/joselorenzo" target="_blank">linkedin.com/in/joselorenzo</a></p>
+  </section>
+  <footer>
+    <p>&copy; 2025 Jose Lorenzo — Data-Driven & Detail-Oriented</p>
+  </footer>
+</body>
+</html>
